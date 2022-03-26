@@ -5,28 +5,28 @@
         "npm" => "213040002", 
         "email" => "yobifirdaus03@gmail.com", 
         "jurusan" => "Teknik Informatika",
-        "gambar" => "img/foto (1).jpg"
+        "gambar" => "foto (1).jpg"
     ],
     [
         "nama" => "Malwi hidayat", 
         "npm" => "213040016", 
         "email" => "malwi@gmail.com", 
         "jurusan" => "Teknik informatika",
-        "gambar" => "img/img1 (2).jpeg"
+        "gambar" => "img1 (2).jpeg"
     ],
     [
         "nama" => "Fowaz amran", 
         "npm" => "213040032", 
         "email" => "fowaz@gmail.com", 
         "jurusan" => "Teknik Informatika",
-        "gambar" => "img/baju.png"
+        "gambar" => "baju.png"
     ],
     [
         "nama" => "Alif akbar", 
         "email" => "alif02@gmail.com", 
         "jurusan" => "Teknik Informatika", 
         "npm" => "2130400018",
-        "gambar" => "img\celana.png"
+        "gambar" => "celana.png"
     ]
 ];
 ?>
@@ -63,7 +63,7 @@
   <?php $no =1; foreach($mahasiswa as $mhs) { ?>
     <tr class="align-middle">
       <th scope="row"><?= $no++;?></th>
-      <td><?php echo $mhs["gambar"] ?></td>
+      <td><img src="img/<?php echo $mhs ["gambar"]?>" width= "30" height="30" class="rounded-circle"></td>
       <td><?php echo $mhs["nama"] ?></td>
       <td><?php echo $mhs["npm"] ?></td>
       <td><?php echo $mhs["email"] ?></td>
