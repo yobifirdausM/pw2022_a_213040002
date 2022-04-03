@@ -28,31 +28,6 @@
         "npm" => "2130400018",
         "gambar" => "celana.png"
     ],
-    [
-       "nama" => "muhammad lutfi",
-       "email" => "muhammadlutfi@gmail.com",
-       "jurusan" => "Teknik Informatika",
-       "npm" => "213040123",
-    ],
-    [
-       "nama" => "muhammad haykal",
-       "email" => "muhammadhaykal@gmail.com",
-       "jurusan" => "Teknik Informatika",
-       "npm" => "213040045",
-    ],
-    [
-       "nama" => "daffa dhiya",
-       "email" => "daffadhiya@gmail.com",
-       "jurusan" => "Teknik Informatika",
-       "npm" => "213040005",
-    ],
-    [
-       "nama" => "muhamad alfarozi",
-       "email" => "muhamadalfarozi@gmail.com",
-       "jurusan" => "Teknik Informatika",
-       "npm" => "213040008",
-    ],
-    
 ];
 ?>
 <!doctype html>
@@ -69,40 +44,27 @@
   </head>
   <body>
 
-  <div class="container">
-      <h1>Daftar Mahasiswa</h1>
+    <div class="container">
+        <h1>Detail Mahasiswa</h1>
 
-      <table class="table">
- <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">Gambar</th>
-      <th scope="col">Nama</th>
-      <th scope="col">NPM</th>
-      <th scope="col">Email</th>
-      <th scope="col">Jurusan</th>
-      <th scope="col">Aksi</th>
-    </tr>
-  </thead>
-  <tbody>
-  <?php $no =1; foreach($mahasiswa as $mhs) { ?>
-    <tr class="align-middle">
-      <th scope="row"><?= $no++;?></th>
-      <td><img src="img/<?php echo $mhs ["gambar"]?>" width= "30" height="30" class="rounded-circle"></td>
-      <td><?php echo $mhs["nama"] ?></td>
-      <td><?php echo $mhs["npm"] ?></td>
-      <td><?php echo $mhs["email"] ?></td>
-      <td><?php echo $mhs["jurusan"] ?></td>
-      <td>
-          <a href="" class="btn badge bg-warning">edit</a>
-          <a href="" class="btn badge bg-danger">delete</a>
-      </td>
-    </tr>
-    <?php } ?>
-  </tbody>
-</table>
-  </div>
+        <div class="card mb-3" style="max-width: 540px;">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <img src="<?= $_GET["gambar"]; ?>" class="img-fluid rounded-start">
+        </div>
+        <div class="col-md-8">
+        <div class="card-body">
+            <h5 class="card-title"><?= $_GET["nama"]; ?></h5>
+            <p class="card-text"><?= $_GET["npm"]; ?></p>
+            <p class="card-text"><?= $_GET["email"]; ?></p>
+            <p class="card-text"><?= $_GET["jurusan"]; ?></p>
+            <a href="kuliah_latihan3.php">Kembali</a>
+        </div>
+        </div>
+    </div>
+</div>
 
+    </div>
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->

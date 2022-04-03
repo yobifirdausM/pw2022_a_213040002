@@ -5,54 +5,29 @@
         "npm" => "213040002", 
         "email" => "yobifirdaus03@gmail.com", 
         "jurusan" => "Teknik Informatika",
-        "gambar" => "foto (1).jpg"
+        "gambar" => "img/foto (1).jpg"
     ],
     [
         "nama" => "Malwi hidayat", 
         "npm" => "213040016", 
         "email" => "malwi@gmail.com", 
         "jurusan" => "Teknik informatika",
-        "gambar" => "img1 (2).jpeg"
+        "gambar" => "img/img1 (2).jpeg"
     ],
     [
         "nama" => "Fowaz amran", 
         "npm" => "213040032", 
         "email" => "fowaz@gmail.com", 
         "jurusan" => "Teknik Informatika",
-        "gambar" => "baju.png"
+        "gambar" => "img/baju.png"
     ],
     [
         "nama" => "Alif akbar", 
         "email" => "alif02@gmail.com", 
         "jurusan" => "Teknik Informatika", 
         "npm" => "2130400018",
-        "gambar" => "celana.png"
+        "gambar" => "img/celana.png"
     ],
-    [
-       "nama" => "muhammad lutfi",
-       "email" => "muhammadlutfi@gmail.com",
-       "jurusan" => "Teknik Informatika",
-       "npm" => "213040123",
-    ],
-    [
-       "nama" => "muhammad haykal",
-       "email" => "muhammadhaykal@gmail.com",
-       "jurusan" => "Teknik Informatika",
-       "npm" => "213040045",
-    ],
-    [
-       "nama" => "daffa dhiya",
-       "email" => "daffadhiya@gmail.com",
-       "jurusan" => "Teknik Informatika",
-       "npm" => "213040005",
-    ],
-    [
-       "nama" => "muhamad alfarozi",
-       "email" => "muhamadalfarozi@gmail.com",
-       "jurusan" => "Teknik Informatika",
-       "npm" => "213040008",
-    ],
-    
 ];
 ?>
 <!doctype html>
@@ -78,9 +53,6 @@
       <th scope="col">#</th>
       <th scope="col">Gambar</th>
       <th scope="col">Nama</th>
-      <th scope="col">NPM</th>
-      <th scope="col">Email</th>
-      <th scope="col">Jurusan</th>
       <th scope="col">Aksi</th>
     </tr>
   </thead>
@@ -88,14 +60,12 @@
   <?php $no =1; foreach($mahasiswa as $mhs) { ?>
     <tr class="align-middle">
       <th scope="row"><?= $no++;?></th>
-      <td><img src="img/<?php echo $mhs ["gambar"]?>" width= "30" height="30" class="rounded-circle"></td>
+      <td><img src="<?php echo $mhs ["gambar"]?>" width= "30" height="30" class="rounded-circle"></td>
       <td><?php echo $mhs["nama"] ?></td>
-      <td><?php echo $mhs["npm"] ?></td>
-      <td><?php echo $mhs["email"] ?></td>
-      <td><?php echo $mhs["jurusan"] ?></td>
       <td>
           <a href="" class="btn badge bg-warning">edit</a>
           <a href="" class="btn badge bg-danger">delete</a>
+          <a href="kuliah_latihan4.php?gambar=<?php echo $mhs["gambar"]; ?>&nama=<?php echo $mhs["nama"] ?>&npm=<?php echo $mhs["npm"] ?>&email=<?php echo $mhs["email"] ?>&jurusan=<?php echo $mhs["jurusan"] ?>" class="btn badge bg-info">detail</a>
       </td>
     </tr>
     <?php } ?>
