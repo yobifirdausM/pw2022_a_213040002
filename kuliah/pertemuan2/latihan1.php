@@ -50,7 +50,7 @@
   echo $luas_segi_tiga;
 
   echo "<br>";
-  echo 3 % 2;
+  echo 3 % 5;
   echo "<hr>";
 
   // CONCAT

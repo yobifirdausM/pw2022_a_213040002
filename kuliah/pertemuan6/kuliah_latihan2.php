@@ -1,11 +1,11 @@
 <?php
  $mahasiswa = [
     [
-        "nama" => "yobi firdaus", 
-        "npm" => "213040002", 
-        "email" => "yobifirdaus03@gmail.com", 
-        "jurusan" => "Teknik Informatika",
-        "gambar" => "foto (1).jpg"
+      "nama" => "yobi firdaus", 
+      "npm" => "213040002", 
+      "email" => "yobifirdaus03@gmail.com", 
+      "jurusan" => "Teknik Informatika", 
+      "gambar" => "foto (1).jpg"
     ],
     [
         "nama" => "Malwi hidayat", 
