@@ -1,10 +1,6 @@
 <?php 
 session_start();
 
-if (!isset ($_SESSION["login"]) ) {
-  header("Location: cover.php");
-  exit;
-}
 
 require 'koneksi.php';
 
@@ -14,6 +10,7 @@ if( isset($_POST["register"]) ) {
   if( registrasi ($_POST) > 0) {
     echo "<script>
             alert ('user baru berhasil ditambahkan');
+            document.location.href = 'pembelajaran.php';
           </script>";
   } else {
     echo mysqli_error($conn);
