@@ -7,7 +7,10 @@ if (!isset ($_SESSION["login"]) ) {
 }
 require 'koneksi.php';
 $pelajaran = query("SELECT * FROM pelajaran");
-
+// tombol cari di klik
+if(isset($_GET ["search"])) {
+  $pelajaran = search($_GET["keyword"]);
+}
 ?>
 
 
@@ -80,6 +83,18 @@ $pelajaran = query("SELECT * FROM pelajaran");
                 >
               </li>
             </ul>
+            <form class="d-flex">
+              <input
+                class="form-control me-2"
+                type="text"
+                placeholder="Search"
+                aria-label="Search"
+                name="keyword" id="keyword" autocomplete="off"
+              />
+              <button class="btn btn-outline-success" type="submit" id="search" name="search">
+                Search
+              </button>
+            </form>
           </div>
         </div>
       </nav>

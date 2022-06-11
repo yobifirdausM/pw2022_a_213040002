@@ -120,6 +120,13 @@ function cari($keyword) {
              ";
     return query($query);
 }
+function search($keyword) {
+    $query = "SELECT * FROM pelajaran 
+                WHERE
+              nama_pelajaran LIKE '%$keyword%'
+             ";
+    return query($query);
+}
 
 
 
